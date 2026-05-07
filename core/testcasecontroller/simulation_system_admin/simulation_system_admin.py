@@ -135,9 +135,9 @@ def check_host_cpu():
         raise RuntimeError("The number os cpus is insufficient.")
 
 
-def check_host_enviroment():
+def check_host_environment():
     """
-    check the host enviroment, includes docker, kind, cpu and memory.
+    check the host environment, includes docker, kind, cpu and memory.
 
     """
     check_host_docker()
@@ -146,13 +146,13 @@ def check_host_enviroment():
     check_host_cpu()
 
 
-def build_simulation_enviroment(simulation):
+def build_simulation_environment(simulation):
     """
-    build a simulation enviroment
+    build a simulation environment
 
     """
 
-    check_host_enviroment()         # check the enviroment
+    check_host_environment()         # check the environment
 
     shell_cmd = "curl https://raw.githubusercontent.com/kubeedge/sedna\
 /master/scripts/installation/all-in-one.sh | " \
@@ -167,14 +167,14 @@ def build_simulation_enviroment(simulation):
 
     if build_simulation_env_ret.returncode == 0:
         LOGGER.info(
-            "Congratulation! The simulation enviroment build successful!")
+            "Congratulation! The simulation environment build successful!")
     else:
-        raise RuntimeError("The simulation enviroment build failed.")
+        raise RuntimeError("The simulation environment build failed.")
 
 
-def destory_simulation_enviroment(simulation):
+def destory_simulation_environment(simulation):
     """
-    build the simulation enviroment
+    build the simulation environment
 
     """
     shell_cmd = "curl https://raw.githubusercontent.com/kubeedge/sedna\
