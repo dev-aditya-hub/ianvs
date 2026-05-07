@@ -132,7 +132,7 @@ def check_host_cpu():
         LOGGER.info(
             "The number of cpus is insufficient. Number of Cpus: %s kB, Cpus Require: %s kB",
             number_of_cpus, cpus_require)
-        raise RuntimeError("The number os cpus is insufficient.")
+        raise RuntimeError("The number of cpus is insufficient.")
 
 
 def check_host_environment():
@@ -172,9 +172,9 @@ def build_simulation_environment(simulation):
         raise RuntimeError("The simulation environment build failed.")
 
 
-def destory_simulation_environment(simulation):
+def destroy_simulation_environment(simulation):
     """
-    build the simulation environment
+    destroy the simulation environment
 
     """
     shell_cmd = "curl https://raw.githubusercontent.com/kubeedge/sedna\
