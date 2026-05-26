@@ -103,7 +103,7 @@ class TestObjectType(Enum):
     ALGORITHMS = "algorithms"
 
 
-class EnvKey:
+class EnvKey(str, Enum):
     """
     Canonical names of the environment variables that ianvs sets for algorithm modules.
 
