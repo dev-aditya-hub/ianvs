@@ -167,7 +167,7 @@ def build_simulation_environment(simulation):
 
     if build_simulation_env_ret.returncode == 0:
         LOGGER.info(
-            "Congratulation! The simulation environment build successful!")
+            "Congratulations! The simulation environment build was successful!")
     else:
         raise RuntimeError("The simulation environment build failed.")
 
