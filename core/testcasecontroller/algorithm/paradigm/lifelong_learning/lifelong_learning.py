@@ -354,7 +354,7 @@ class LifelongLearning(ParadigmBase):
         if not is_local_dir(train_output_dir):
             os.makedirs(train_output_dir)
 
-        os.environ[EnvKey.CLOUD_KB_INDEX] = cloud_task_index
+        os.environ[EnvKey.CLOUD_KB_INDEX] = str(cloud_task_index)
         os.environ[EnvKey.OUTPUT_URL] = train_output_dir
         if rounds < 1:
             os.environ[EnvKey.HAS_COMPLETED_INITIAL_TRAINING] = 'False'
